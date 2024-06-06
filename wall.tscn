@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://drt3hv0kc03dv"]
+
+[ext_resource type="Script" path="res://wall.gd" id="1_fqfcc"]
+[ext_resource type="Texture2D" uid="uid://cxr2pf5b0axe3" path="res://icon.svg" id="1_gmljw"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_xfcxf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_obrhj"]
+size = Vector2(75, 1285)
+
+[node name="RigidBody2D" type="RigidBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_xfcxf")
+freeze = true
+constant_force = Vector2(100, 100)
+script = ExtResource("1_fqfcc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(-148.5, -641)
+shape = SubResource("RectangleShape2D_obrhj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-146.5, -641)
+scale = Vector2(0.648438, 9.96875)
+texture = ExtResource("1_gmljw")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(212, 94)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-129.5, -744.5)
+shape = SubResource("RectangleShape2D_obrhj")
+debug_color = Color(0.988235, 0, 0.286275, 0.419608)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

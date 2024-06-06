@@ -1,0 +1,9 @@
+res://map.tscn
+res://map.gd
+res://player.gd
+res://player1.tscn
+res://player2.tscn
+res://p_hud.tscn
+res://enemy.tscn
+res://map_2.tscn
+res://wall.tscn

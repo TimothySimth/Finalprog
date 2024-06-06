@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://bs4heasdrxm0v"]
+
+[ext_resource type="Texture2D" uid="uid://7ppit1kyc7nf" path="res://lpc_entry/png/maleBase/full/advnt_full.png" id="1_dkpc7"]
+[ext_resource type="Script" path="res://player.gd" id="1_gy77q"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lfmgp"]
+atlas = ExtResource("1_dkpc7")
+region = Rect2(0, 0, 32, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_luypy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lfmgp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nu1bk"]
+height = 48.0
+
+[node name="player1" type="CharacterBody2D"]
+position = Vector2(226, 90)
+script = ExtResource("1_gy77q")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_luypy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 2)
+shape = SubResource("CapsuleShape2D_nu1bk")
+
+[node name="Camera2D" type="Camera2D" parent="."]

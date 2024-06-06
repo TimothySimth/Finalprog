@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=3 uid="uid://dsghlqevai12l"]
+
+[ext_resource type="Texture2D" uid="uid://c37dr2oo4gl2c" path="res://lpc_entry/png/kenney-particle-pack-7e801dc538996622a91327bb1dd5879cf977aa09/kenney-particle-pack-7e801dc538996622a91327bb1dd5879cf977aa09/addons/kenney_particle_pack/flame_01.png" id="1_s3ula"]
+[ext_resource type="Texture2D" uid="uid://b5gdovc01ybeu" path="res://lpc_entry/png/kenney-particle-pack-7e801dc538996622a91327bb1dd5879cf977aa09/kenney-particle-pack-7e801dc538996622a91327bb1dd5879cf977aa09/addons/kenney_particle_pack/flame_02.png" id="2_ggan5"]
+[ext_resource type="Texture2D" uid="uid://cchxpqrtp5xyj" path="res://lpc_entry/png/kenney-particle-pack-7e801dc538996622a91327bb1dd5879cf977aa09/kenney-particle-pack-7e801dc538996622a91327bb1dd5879cf977aa09/addons/kenney_particle_pack/flame_03.png" id="3_ne16k"]
+[ext_resource type="Texture2D" uid="uid://b08gbtbmlglr3" path="res://lpc_entry/png/kenney-particle-pack-7e801dc538996622a91327bb1dd5879cf977aa09/kenney-particle-pack-7e801dc538996622a91327bb1dd5879cf977aa09/addons/kenney_particle_pack/flame_04.png" id="4_bt501"]
+[ext_resource type="Texture2D" uid="uid://bt2i81gbai3ax" path="res://lpc_entry/png/kenney-particle-pack-7e801dc538996622a91327bb1dd5879cf977aa09/kenney-particle-pack-7e801dc538996622a91327bb1dd5879cf977aa09/addons/kenney_particle_pack/flame_05.png" id="5_o11x7"]
+[ext_resource type="Texture2D" uid="uid://bywaqpri4bcf5" path="res://lpc_entry/png/kenney-particle-pack-7e801dc538996622a91327bb1dd5879cf977aa09/kenney-particle-pack-7e801dc538996622a91327bb1dd5879cf977aa09/addons/kenney_particle_pack/flame_06.png" id="6_dhohq"]
+
+[node name="flame" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 0.305882, 0.419608, 1)
+texture_filter = 1
+
+[node name="Flame01" type="Sprite2D" parent="."]
+modulate = Color(0.858824, 0, 0.337255, 1)
+position = Vector2(221, 81)
+texture = ExtResource("1_s3ula")
+
+[node name="Flame02" type="Sprite2D" parent="."]
+modulate = Color(0.670588, 0.0235294, 0.2, 1)
+position = Vector2(230, 113)
+texture = ExtResource("2_ggan5")
+
+[node name="Flame03" type="Sprite2D" parent="."]
+modulate = Color(0.976471, 0, 0.435294, 1)
+position = Vector2(216, 108)
+texture = ExtResource("3_ne16k")
+
+[node name="Flame04" type="Sprite2D" parent="."]
+modulate = Color(0.854902, 0, 0.219608, 1)
+position = Vector2(207, 94)
+texture = ExtResource("4_bt501")
+
+[node name="Flame05" type="Sprite2D" parent="."]
+modulate = Color(0.976471, 0.133333, 0, 1)
+position = Vector2(260, 144)
+texture = ExtResource("5_o11x7")
+
+[node name="Flame06" type="Sprite2D" parent="."]
+modulate = Color(1, 0.117647, 0.415686, 1)
+position = Vector2(268, 149)
+texture = ExtResource("6_dhohq")

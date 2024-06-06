@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=3 uid="uid://je4vkcayd5ee"]
+
+[ext_resource type="Script" path="res://character_body_2d.gd" id="1_o0cwa"]
+[ext_resource type="Texture2D" uid="uid://lov670nxvxnk" path="res://lpc_entry/png/mvHumanWoman/full/cleric.png" id="2_1sxxh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1588e"]
+atlas = ExtResource("2_1sxxh")
+region = Rect2(0, 0, 35, 71)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u3hae"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1588e")
+}],
+"loop": true,
+"name": &"idle_",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"jump_",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"walk_",
+"speed": 5.0
+}]
+
+[node name="player2" type="CharacterBody2D"]
+position = Vector2(181, 141)
+script = ExtResource("1_o0cwa")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-9, 28, -6, 28, -6, 22, -2, 22, -1, 27, 3, 27, 2, 22, 2, -1, 3, -3, 1, -6, 3, -9, 2, -14, 0, -15, -3, -16, -6, -13, -6, -6, -7, -3, -8, 3, -7, 11, -8, 17, -9, 21)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_u3hae")
+animation = &"idle_"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 1.25
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-181, -141)

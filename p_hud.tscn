@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cnc6ed1hurepp"]
+
+[node name="p_hud" type="CanvasLayer"]
+
+[node name="ProgressBar" type="ProgressBar" parent="." groups=["HUD"]]
+offset_right = 426.0
+offset_bottom = 49.0
